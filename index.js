@@ -1,12 +1,9 @@
 import mysql from 'mysql2'
+import { password, dbConnection } from './secrets.js'
 
 // connect to database
-const db = mysql.createConnection({ // connect and call connection 'db'
-    host: '127.0.0.1',
-    database: 'bocacode',
-    user: 'root',
-    password: 'test123456'
-})
+const db = mysql.createConnection( dbConnection // connect and call connection 'db'
+)
 
 console.log("We are connected!")
 
